@@ -1,7 +1,15 @@
 function count (string) {  
-  // The function code should be here
+  
+  result = {}
+
   if(string){
-    return {"a": 1}
+    characters = string.split('')
+    countCharacters = (x) => string.split(x).length-1
+    for(i = 0; i < characters.length; i++){
+      characterCount = countCharacters(characters[i])
+      result[characters[i]]=characterCount
+    }
+    return result
   } 
   else{return {}}
   ;
